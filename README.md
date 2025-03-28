@@ -1,6 +1,6 @@
-# MACE-MP models
+# MACE-FOUNDATION models
 
-This repository contains the MACE-MP pre-trained foundation models for materials chemistry, parameterised for 89 chemical elements.
+This repository contains the MACE pre-trained foundation models for materials chemistry, parameterised for 89 chemical elements.
 
 To use the models please install the [MACE code](https://github.com/ACEsuit/mace).
 
@@ -13,9 +13,12 @@ To use the models please install the [MACE code](https://github.com/ACEsuit/mace
 | MACE-MP-0a         | 89               | MPTrj            | DFT (PBE+U)           | Materials            | [small](https://github.com/ACEsuit/mace-mp/releases/download/mace_mp_0/2023-12-10-mace-128-L0_energy_epoch-249.model), [medium](https://github.com/ACEsuit/mace-mp/releases/download/mace_mp_0/2023-12-03-mace-128-L1_epoch-199.model), [large](https://github.com/ACEsuit/mace-mp/releases/download/mace_mp_0/2024-01-07-mace-128-L2_epoch-199.model)| >=v0.3.6       | Initial release of foundation model.                          | MIT |
 | MACE-MP-0b        | 89               | MPTrj             | DFT (PBE+U)           | Materials            | [models](https://github.com/ACEsuit/mace-mp/releases/tag/mace_mp_0b)              | >=v0.3.10      | Improve pair repulsion and correct isolated atoms. | MIT |
 | MACE-MP-0b2        | 89               | MPTrj             | DFT (PBE+U)           | Materials            | [models](https://github.com/ACEsuit/mace-mp/releases/tag/mace_mp_0b2)              | >=v0.3.9      | Improve stability at high pressure. | MIT |
-| MACE-MP-0b3        | 89               | MPTrj             | DFT (PBE+U)           | Materials            | [models](https://github.com/ACEsuit/mace-mp/releases/tag/mace_mp_0b3)              | >=v0.3.9      | Fixed some phonons issues compared to b2 | MIT |
+| MACE-MP-0b3        | 89               | MPTrj             | DFT (PBE+U)           | Materials            | [models](https://github.com/ACEsuit/mace-mp/releases/tag/mace_mp_0b3)              | >=v0.3.9      | Fixed some phonons issues compared to b2. | MIT |
 | MACE-MPA-0        | 89               | MPTrj + sAlex    | DFT (PBE+U)           | Materials            | [medium](https://github.com/ACEsuit/mace-mp/releases/download/mace_mpa_0/mace-mpa-0-medium.model)              | >=v0.3.10      | Improved accuracy for materials, improved high pressure stability. | MIT |
-| MACE-OMAT-0        | 89               | OMAT         | DFT (PBE+U) VASP 54        | Materials    | [medium](https://github.com/ACEsuit/mace-mp/releases/download/mace_omat_0/mace-omat-0-medium.model) | >=v0.3.10       |             | ASL |
+| MACE-OMAT-0        | 89               | OMAT         | DFT (PBE+U) VASP 54        | Materials    | [medium](https://github.com/ACEsuit/mace-mp/releases/download/mace_omat_0/mace-omat-0-medium.model) | >=v0.3.10       |     Excellent phonons.        | ASL |
+| MACE-MATPES-PBE-0        | 89               | MATPES-PBE         | DFT (PBE)        | Materials    | [medium](https://github.com/ACEsuit/mace-foundations/releases/download/mace_matpes_0/MACE-matpes-pbe-omat-ft.model) | >=v0.3.10       | No +U correction.            | ASL |
+| MACE-MATPES-PBE-0        | 89               | MATPES-r2SCAN         | DFT (r2SCAN)        | Materials    | [medium](https://github.com/ACEsuit/mace-foundations/releases/download/mace_matpes_0/MACE-matpes-r2scan-omat-ft.model) | >=v0.3.10       |  Better functional for materials.           | ASL |
+
 
 The first generation of models are available in the [MACE-MP-0](https://github.com/ACEsuit/mace-mp/releases/tag/mace_mp_0).
 
