@@ -17,7 +17,7 @@ To use the models please install the [MACE code](https://github.com/ACEsuit/mace
 | MACE-MPA-0        | 89               | MPTrj + sAlex    | DFT (PBE+U)           | Materials            | [medium](https://github.com/ACEsuit/mace-mp/releases/download/mace_mpa_0/mace-mpa-0-medium.model)              | >=v0.3.10      | Improved accuracy for materials, improved high pressure stability. | MIT |
 | MACE-OMAT-0        | 89               | OMAT         | DFT (PBE+U) VASP 54        | Materials    | [medium](https://github.com/ACEsuit/mace-mp/releases/download/mace_omat_0/mace-omat-0-medium.model) | >=v0.3.10       |     Excellent phonons.        | ASL |
 | MACE-MATPES-PBE-0        | 89               | MATPES-PBE         | DFT (PBE)        | Materials    | [medium](https://github.com/ACEsuit/mace-foundations/releases/download/mace_matpes_0/MACE-matpes-pbe-omat-ft.model) | >=v0.3.10       | No +U correction.            | ASL |
-| MACE-MATPES-PBE-0        | 89               | MATPES-r2SCAN         | DFT (r2SCAN)        | Materials    | [medium](https://github.com/ACEsuit/mace-foundations/releases/download/mace_matpes_0/MACE-matpes-r2scan-omat-ft.model) | >=v0.3.10       |  Better functional for materials.           | ASL |
+| MACE-MATPES-r2SCAN-0        | 89               | MATPES-r2SCAN         | DFT (r2SCAN)        | Materials    | [medium](https://github.com/ACEsuit/mace-foundations/releases/download/mace_matpes_0/MACE-matpes-r2scan-omat-ft.model) | >=v0.3.10       |  Better functional for materials.           | ASL |
 
 
 The first generation of models are available in the [MACE-MP-0](https://github.com/ACEsuit/mace-mp/releases/tag/mace_mp_0).
