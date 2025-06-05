@@ -4,6 +4,8 @@ This repository contains the MACE pre-trained foundation models for materials ch
 
 To use the models please install the [MACE code](https://github.com/ACEsuit/mace).
 
+Models also available on Hugging Face: https://huggingface.co/mace-foundations.
+
 ## Models
 
 ### Latest Recommended Foundation Models
