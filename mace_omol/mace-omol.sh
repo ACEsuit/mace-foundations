@@ -6,8 +6,8 @@ python ./mace/mace/cli/run_train.py \
     --statistics_file='./omol-statistics-linear.json' \
     --energy_weight=10 \
     --forces_weight=10 \
-    --mean=0.0 \
-    --std=1.0 \
+    --mean=0.1021 \
+    --std=1.5151 \
     --energy_key='REF_energy' \
     --forces_key='REF_forces' \
     --total_charge_key="charge" \
