@@ -1,0 +1,52 @@
+python ./mace/mace/cli/run_train.py \
+    --name="MACE-omol-extra-large" \
+    --train_file="omol/train/" \
+    --valid_file="omol/val" \
+    --test_file="omol/test/" \
+    --statistics_file='./omol-statistics-linear.json' \
+    --energy_weight=10 \
+    --forces_weight=10 \
+    --mean=0.0 \
+    --std=1.0 \
+    --energy_key='REF_energy' \
+    --forces_key='REF_forces' \
+    --total_charge_key="charge" \
+    --total_spin_key="spin" \
+    --eval_interval=1 \
+    --error_table='PerAtomMAE' \
+    --model="ScaleShiftMACE" \
+    --loss='l1l2energyforces' \
+    --interaction_first="RealAgnosticResidualNonLinearInteractionBlock" \
+    --interaction="RealAgnosticResidualNonLinearInteractionBlock" \
+    --apply_cutoff=False \
+    --num_interactions=3 \
+    --correlation=2 \
+    --max_ell=3 \
+    --r_max=6.0 \
+    --num_cutoff_basis=5 \
+    --hidden_irreps="1024x0e + 1024x1o + 1024x2e" \
+    --edge_irreps="128x0e + 128x1o + 128x2e" \
+    --num_radial_basis=8 \
+    --MLP_irreps="16x0e" \
+    --embedding_specs '{"total_spin":{"type":"categorical","per":"graph","in_dim":1,"emb_dim":1024,"num_classes":101,"offset":0},"total_charge":{"type":"categorical","per":"graph","in_dim":1,"emb_dim":1024,"num_classes":201,"offset":100}}' \
+    --radial_MLP="[64, 64, 64]" \
+    --scaling='rms_forces_scaling' \
+    --lr=0.01 \
+    --weight_decay=0.0 \
+    --ema \
+    --ema_decay=0.9999 \
+    --batch_size=8 \
+    --valid_batch_size=8 \
+    --max_num_epochs=50 \
+    --optimizer="schedulefree" \
+    --patience=40 \
+    --amsgrad \
+    --device=cuda \
+    --seed=1 \
+    --clip_grad=1.0 \
+    --keep_checkpoints \
+    --save_all_checkpoints \
+    --restart_latest \
+    --default_dtype="float64" \
+    --num_workers=4 \
+    --save_cpu
