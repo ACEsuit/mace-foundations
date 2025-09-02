@@ -31,6 +31,7 @@ python ./mace/mace/cli/run_train.py \
     --ema \
     --ema_decay=0.999 \
     --error_table="PerAtomMAE" \
+    --max_num_epochs=10 \
     --device=cuda \
     --restart_latest \
     --weight_decay=1e-8 \
