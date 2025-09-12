@@ -24,8 +24,8 @@ python ./mace/mace/cli/run_train.py \
     --max_ell=3 \
     --r_max=6.0 \
     --num_cutoff_basis=5 \
-    --hidden_irreps="1024x0e + 1024x1o" \
-    --edge_irreps="128x0e + 128x1o" \
+    --hidden_irreps="1024x0e + 1024x1o + 1024x2e" \
+    --edge_irreps="128x0e + 128x1o + 128x2e" \
     --num_radial_basis=8 \
     --MLP_irreps="16x0e" \
     --embedding_specs '{"total_spin":{"type":"categorical","per":"graph","in_dim":1,"emb_dim":1024,"num_classes":101,"offset":0},"total_charge":{"type":"categorical","per":"graph","in_dim":1,"emb_dim":1024,"num_classes":201,"offset":100}}' \
