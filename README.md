@@ -49,11 +49,11 @@ MACE-Universal by Yuan Chiang, 2023, Hugging Face, Revision e5ebd9b, DOI: 10.579
 
 ## Training scripts
 
-We provide training scripts for the models in this repository. The latest training command line is found in [`mace_mp_0/2024-01-07-mace-128-L2.sh`](mace_mp_0/2024-01-07-mace-128-L2.sh).
+We provide training scripts for the models in this repository. For MP-0 models, see the following [folder](https://github.com/ACEsuit/mace-foundations/tree/main/mace_mp_0a).
 
 ## Training data
 
-The MPtrj dataset used to train the model is available at [training-data](https://github.com/ACEsuit/mace-mp/releases/download/mace_mp_0/training_data.zip). Please cite the following paper if you use the dataset.
+The MPtrj dataset used to train the MP-0 model is available at [training-data](https://github.com/ACEsuit/mace-mp/releases/download/mace_mp_0/training_data.zip). Please cite the following paper if you use the dataset.
 
 ```bib
 @article{deng2023chgnet,
