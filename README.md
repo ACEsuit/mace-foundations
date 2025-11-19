@@ -67,6 +67,10 @@ The MPtrj dataset used to train the MP-0 model is available at [training-data](h
 }
 ```
 
+## Supplementary materials for examples
+
+The example trajectories, chemiscope json files, and other supplementary data presented in the paper are also archived at https://zenodo.org/communities/mace-mp/records
+
 ## Trajectories and movies
 
 Trajectories for the results presented in the paper and simulation movies can be found at [example-xyz-movies](https://drive.google.com/drive/folders/1141d1rI1rtwf9iSFv5r_g4XL_AvmjiK5).
