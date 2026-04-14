@@ -1,0 +1,72 @@
+name: "mace-mh-1"
+
+heads:
+  PBE:
+    info_keys:
+      energy: "energy"
+    arrays_keys:
+      forces: "forces"
+    train_file:
+      - "/path/to/omat/train/aimd_only_lmdb"
+      - "/path/to/omat/omat-isolated-e0.aselmdb"
+    valid_file:
+      - "/path/to/omat/val/aimd_only_lmdb"
+    statistics_file: "./mace_mh_1/omat-statistics.json"
+    keep_isolated_atoms: true
+
+statistics_file: "./mace_mh_1/omat-statistics.json"
+keep_isolated_atoms: true
+
+model: "ScaleShiftMACE"
+interaction_first: "RealAgnosticResidualNonLinearInteractionBlock"
+interaction: "RealAgnosticResidualNonLinearInteractionBlock"
+hidden_irreps: "512x0e + 512x1o"
+edge_irreps: "128x0e + 128x1o"
+max_ell: 3
+correlation: 3
+num_interactions: 2
+num_radial_basis: 10
+r_max: 6.0
+pair_repulsion: true
+distance_transform: "Agnesi"
+apply_cutoff: false
+use_edge_irreps_first: true
+use_agnostic_product: true
+scaling: "rms_forces_scaling"
+
+optimizer: "adam"
+amsgrad: true
+lr: 0.003
+weight_decay: 1e-8
+uniform_weight_decay: true
+scheduler: "ReduceLROnPlateau"
+lr_factor: 0.8
+scheduler_patience: 5
+
+loss: "universal"
+energy_weight: 1.0
+forces_weight: 10.0
+stress_weight: 0.0
+compute_stress: true
+huber_delta: 0.01
+error_table: "PerAtomRMSEstressvirials"
+
+batch_size: 32
+valid_batch_size: 32
+eval_interval: 1
+max_num_epochs: 20
+patience: 40
+clip_grad: 100.0
+num_workers: 2
+
+ema: true
+ema_decay: 0.995
+
+mean: 0.0
+std: 0.7735790334431056
+
+default_dtype: "float32"
+seed: 123
+keep_checkpoints: true
+restart_latest: true
+save_cpu: true
