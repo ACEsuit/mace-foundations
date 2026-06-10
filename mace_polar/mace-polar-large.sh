@@ -1,0 +1,38 @@
+# MACE-Polar-1-L (large): 3-layer PolarMACE.
+# Trained distributed (128 GPUs, schedulefree); flags below reproduce the run.
+python ./mace/mace/cli/run_train.py \
+    --name="polar-1-l" \
+    --config=config-mace-polar.yaml \
+    --train_file="omol/train/" \
+    --valid_file="omol/neutral_val/" \
+    --test_dir="omol/neutral_val/" \
+    --statistics_file="omol-statistics-linear.json" \
+    --model="PolarMACE" \
+    --num_interactions=3 \
+    --hidden_irreps="512x0e + 512x1o + 512x2e" \
+    --edge_irreps="128x0e + 128x1o + 128x2e" \
+    --loss='l1l2energyforces' \
+    --energy_weight=10.0 \
+    --forces_weight=10.0 \
+    --energy_key='energy' \
+    --forces_key='forces' \
+    --error_table='PerAtomRMSE' \
+    --eval_interval=1 \
+    --batch_size=4 \
+    --valid_batch_size=2 \
+    --optimizer="schedulefree" \
+    --beta1_schedulefree=0.9 \
+    --beta2_schedulefree=0.98 \
+    --warmup_steps_schedulefree=2000 \
+    --ema \
+    --ema_decay=0.99999 \
+    --weight_decay=1e-8 \
+    --clip_grad=1.0 \
+    --default_dtype="float32" \
+    --device=cuda \
+    --seed=1 \
+    --save_cpu \
+    --restart_latest \
+    --distributed \
+    --launcher="slurm" \
+    --num_workers=4
