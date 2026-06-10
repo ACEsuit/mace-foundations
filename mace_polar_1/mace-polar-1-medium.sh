@@ -2,7 +2,7 @@
 # Trained distributed (128 GPUs, schedulefree); flags below reproduce the run.
 python ./mace/mace/cli/run_train.py \
     --name="polar-1-m" \
-    --config=config-mace-polar.yaml \
+    --config=config-mace-polar-1.yaml \
     --train_file="omol/train/" \
     --valid_file="omol/neutral_val/" \
     --test_dir="omol/neutral_val/" \

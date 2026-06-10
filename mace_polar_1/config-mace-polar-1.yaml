@@ -1,7 +1,7 @@
 # Shared config for the MACE-Polar foundation models (polar-1-m / polar-1-l).
 # Every value here is identical between the medium and large models; the
 # size-specific flags (num_interactions / hidden_irreps / edge_irreps / name)
-# live in mace-polar-medium.sh and mace-polar-large.sh.
+# live in mace-polar-1-medium.sh and mace-polar-1-large.sh.
 #
 # Verified against the released checkpoints via extract_config_mace_model.
 

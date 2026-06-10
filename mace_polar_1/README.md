@@ -5,10 +5,10 @@ on OMol at the wB97M-V level.
 
 | Model | Layers | hidden_irreps | edge_irreps | Script |
 |-------|--------|---------------|-------------|--------|
-| polar-1-m | 2 | `512x0e + 512x1o` | `128x0e + 128x1o` | `mace-polar-medium.sh` |
-| polar-1-l | 3 | `512x0e + 512x1o + 512x2e` | `128x0e + 128x1o + 128x2e` | `mace-polar-large.sh` |
+| polar-1-m | 2 | `512x0e + 512x1o` | `128x0e + 128x1o` | `mace-polar-1-medium.sh` |
+| polar-1-l | 3 | `512x0e + 512x1o + 512x2e` | `128x0e + 128x1o + 128x2e` | `mace-polar-1-large.sh` |
 
-- `config-mace-polar.yaml` — all hyperparameters shared between the two sizes
+- `config-mace-polar-1.yaml` — all hyperparameters shared between the two sizes
   (backbone, field/electrostatics, E0s, element set).
 - `omol-statistics-linear.json` — statistics (avg_num_neighbors = 30, mean 0 / std 1).
 
