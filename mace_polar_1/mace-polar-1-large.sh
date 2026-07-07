@@ -14,8 +14,10 @@ python ./mace/mace/cli/run_train.py \
     --loss='l1l2energyforces' \
     --energy_weight=10.0 \
     --forces_weight=10.0 \
-    --energy_key='energy' \
-    --forces_key='forces' \
+    --energy_key='REF_energy' \
+    --forces_key='REF_forces' \
+    --total_charge_key='charge' \
+    --total_spin_key='spin' \
     --error_table='PerAtomRMSE' \
     --eval_interval=1 \
     --batch_size=4 \
