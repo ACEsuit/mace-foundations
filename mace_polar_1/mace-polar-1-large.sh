@@ -32,6 +32,8 @@ python ./mace/mace/cli/run_train.py \
     --clip_grad=1.0 \
     --default_dtype="float32" \
     --device=cuda \
+    --enable_cueq=True \
+    --cueq_conv_fusion=False \
     --seed=1 \
     --save_cpu \
     --restart_latest \

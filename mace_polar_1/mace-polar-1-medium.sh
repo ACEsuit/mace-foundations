@@ -1,5 +1,7 @@
 # MACE-Polar-1-M (medium): 2-layer PolarMACE.
-# Trained distributed (128 GPUs, schedulefree); flags below reproduce the run.
+# The release was trained on 128 GPUs at --batch_size=4. --batch_size=64 on 8 GPU processes keeps the
+# total batch of 512 and fits an 80 GB GPU: peak 53 GiB on the largest 64-structure batch
+# expected in an epoch of OMol train (5.5k atoms); fits at 7.0k atoms, out of memory at 8.5k.
 python ./mace/mace/cli/run_train.py \
     --name="polar-1-m" \
     --config=config-mace-polar-1.yaml \
@@ -20,7 +22,7 @@ python ./mace/mace/cli/run_train.py \
     --total_spin_key='spin' \
     --error_table='PerAtomRMSE' \
     --eval_interval=1 \
-    --batch_size=4 \
+    --batch_size=64 \
     --valid_batch_size=2 \
     --optimizer="schedulefree" \
     --beta1_schedulefree=0.9 \
@@ -32,6 +34,8 @@ python ./mace/mace/cli/run_train.py \
     --clip_grad=1.0 \
     --default_dtype="float32" \
     --device=cuda \
+    --enable_cueq=True \
+    --cueq_conv_fusion=False \
     --seed=1 \
     --save_cpu \
     --restart_latest \

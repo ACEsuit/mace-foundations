@@ -18,6 +18,8 @@ radial_MLP: "[64, 64, 64]"
 MLP_irreps: 16x0e
 gate: silu
 use_agnostic_product: True
+apply_cutoff: False
+readout_cls: NonLinearBiasReadoutBlock
 
 # --- PolarMACE field / electrostatics ----------------------------------------
 num_recursion_steps: 2
